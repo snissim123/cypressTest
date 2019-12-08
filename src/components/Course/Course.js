@@ -23,6 +23,7 @@ const moveCourse = course => {
   
   const Course = ({ course, state, user }) => (
     <Button 
+      data-cy={ course.title }
       color={ buttonColor(state.selected.includes(course)) }
       onClick={ () => state.toggle(course) }
       onDoubleClick={ user ? () => moveCourse(course) : null }
