@@ -22,7 +22,8 @@ const moveCourse = course => {
     };
   
   const Course = ({ course, state, user }) => (
-    <Button color={ buttonColor(state.selected.includes(course)) }
+    <Button 
+      color={ buttonColor(state.selected.includes(course)) }
       onClick={ () => state.toggle(course) }
       onDoubleClick={ user ? () => moveCourse(course) : null }
       disabled={ hasConflict(course, state.selected) }

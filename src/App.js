@@ -69,7 +69,7 @@ const App = () => {
   }, []);
 
   return (
-    <Container>
+    <Container data-cy="title">
       <Banner title={ schedule.title } user={ user } />
       <CourseList courses={ schedule.courses } user={ user } />
     </Container>
